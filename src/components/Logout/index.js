@@ -27,7 +27,7 @@ const Logout = ({ setIsAuthenticated }) => {
     };
 
     return (
-        <button style={{ marginLeft:'12px' }} className="muted-button" onClick={handleLogout}> Logout</button>
+        <button style={{ marginLeft:'12px' }} className="bg-dark-subtle btn muted-button" onClick={handleLogout}> Logout</button>
     );
 };
 

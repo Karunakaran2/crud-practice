@@ -13,7 +13,7 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
 
     return (
         <div className="contain-table">
-      <table className="striped-table">
+      <table className="striped-table table table-bordered table-hover table-responsive">
                 <thead>
                     <tr>
                         <th>No.</th>
@@ -39,7 +39,7 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
                         <td className="text-right">
                             <button
                                 onClick={() => handleEdit(employee.id)}
-                                className="button muted-button"
+                                className="btn btn-primary button me-1 muted-button"
                             >
                                 Edit
                             </button>
@@ -47,7 +47,7 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
                         <td className="text-left">
                             <button
                                 onClick={() => handleDelete(employee.id)}
-                                className="button muted-button"
+                                className="btn btn-outline-danger button muted-button"
                             >
                                 Delete
                             </button>

@@ -96,11 +96,11 @@ const EmployeeForm = ({
 
     return (
         <div className="small-container">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="d-flex flex-column">
                 <h1>{isEdit ? "Edit" : "Add"} Employee</h1>
 
                 <label htmlFor="firstName">First Name</label>
-                <input
+                <input className="form-control"
                     type="text"
                     id="firstName"
                     name="firstName"
@@ -109,7 +109,7 @@ const EmployeeForm = ({
                 />
 
                 <label htmlFor="lastName">Last Name</label>
-                <input
+                <input className="form-control"
                     type="text"
                     id="lastName"
                     name="lastName"
@@ -118,7 +118,7 @@ const EmployeeForm = ({
                 />
 
                 <label htmlFor="email">Email</label>
-                <input
+                <input className="form-control"
                     type="email"
                     id="email"
                     name="email"
@@ -127,7 +127,7 @@ const EmployeeForm = ({
                 />
 
                 <label htmlFor="salary">Salary</label>
-                <input
+                <input className="form-control"
                     type="number"
                     id="salary"
                     name="salary"
@@ -136,7 +136,7 @@ const EmployeeForm = ({
                 />
 
                 <label htmlFor="date">Date</label>
-                <input
+                <input className="form-control"
                     type="date"
                     id="date"
                     name="date"
@@ -145,11 +145,11 @@ const EmployeeForm = ({
                 />
 
                 <div style={{ marginTop: "30px" }}>
-                    <input type="submit" value={isEdit ? "Update" : "Add"} />
+                    <input type="submit" value={isEdit ? "Update" : "Add"} className="btn btn-primary"/>
                     <input
                         type="button"
                         value="Cancel"
-                        className="muted-button"
+                        className="btn btn-danger muted-button"
                         style={{ marginLeft: "10px" }}
                         onClick={() => {
                             isEdit ? setIsEditing(false) : setIsAdding(false);
